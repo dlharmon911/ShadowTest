@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ShadowTest.vcxproj" Id="33dfd3c6-100c-4f09-8bfa-6534777b5222" />
+</Solution>

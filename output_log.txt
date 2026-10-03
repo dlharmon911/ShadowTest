@@ -1,0 +1,58 @@
+Info: Manually allocated 260 bytes for an object
+Info: Initializing input
+Info: Manually allocated 16 bytes for an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually freed 16 bytes from an object
+Info: Manually freed 16 bytes from an object
+Info: Manually allocated 16 bytes for an object
+Info: Manually freed 16 bytes from an object
+Info: Manually freed 16 bytes from an object
+Info: Manually freed 16 bytes from an object
+Info: Uninitializing input
+Info: Manually freed 260 bytes from an object
+
+Total manual memory data_main:
+	Allocations: 24 (628)
+	Deallocations: 24 (628)
+	Net: 0
+
+Goodbye!
+
