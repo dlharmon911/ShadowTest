@@ -1,6 +1,6 @@
 /*
  * File "s_manifest.h" generated from compiled manifest
-. * 2026-10-04 09:04:31
+. * 2026-10-04 09:26:13
  * Do not modify this file.
  */
 
@@ -20,7 +20,7 @@
 /* SECTION: DEFINES */
 
 #define SHADOW_VERSION 1.0
-#define SHADOW_TITLE "Mahjong"
+#define SHADOW_TITLE "Shadow Test"
 #define SHADOW_DISPLAY_WIDTH 1200
 #define SHADOW_DISPLAY_HEIGHT 800
 #define SHADOW_TIMER_SPEED 60.0
