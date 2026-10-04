@@ -1,87 +1,5 @@
 #include "s_common.h"
 
-static int32_t s_main_initialize(s_data_main_t* data_main)
-{
-	if (NULL == data_main)
-	{
-		return -1;
-	}
-
-	if (s_manifest_install_allegro() != 0)
-	{
-		return -1;
-	}
-
-#ifdef _DEBUG
-	ogle_log_open("output_log.txt");
-#endif
-
-	if (s_manifest_initialize_data((s_manifest_data_t*)data_main) != 0)
-	{
-		return -1;
-	}
-
-	ALLEGRO_BITMAP* icon = al_load_bitmap("assets/images/icon.png");
-	if (icon)
-	{
-		al_convert_mask_to_alpha(icon, al_map_rgb(0xff, 0x00, 0xff));
-		al_set_display_icon(data_main->m_display, icon);
-		al_destroy_bitmap(icon);
-	}
-	al_clear_to_color(al_map_rgb(0x16, 0x16, 0x21));
-	al_flip_display();
-
-	srand((unsigned int)time(NULL));
-
-	data_main->m_input = ogle_object_create(ogle_input_size(), &ogle_input_initializer, NULL);
-	if (NULL == data_main->m_input)
-	{
-		ogle_do_log(OGLE_LOG_LEVEL_ERROR, "Failed to create input");
-		return -1;
-	}
-
-	s_data_render_zero(data_main->m_render);
-	if (s_data_render_initialize(data_main->m_render) != 0)
-	{
-		ogle_do_log(OGLE_LOG_LEVEL_ERROR, "Failed to initialize render data_main");
-		return -1;
-	}
-
-	al_hide_mouse_cursor(data_main->m_display);
-
-	return 0;
-}
-
-static void s_main_cleanup(s_data_main_t* data_main)
-{
-	if (NULL == data_main)
-	{
-		return;
-	}
-
-	if (data_main->m_display)
-	{
-		al_show_mouse_cursor(data_main->m_display);
-	}
-
-	s_data_render_uninitialize(data_main->m_render);
-
-	if (data_main->m_input)
-	{
-		ogle_object_destroy(data_main->m_input, &ogle_input_uninitializer);
-		data_main->m_input = NULL;
-	}
-
-	s_manifest_uninitialize_data((s_manifest_data_t*)data_main);
-
-	s_manifest_uninstall_allegro();
-
-	ogle_log_print("\nTotal manual memory data_main:\n");
-	ogle_log_printf("\tAllocations: %d (%zu)\n", ogle_object_total_allocations(), ogle_object_memory_allocated());
-	ogle_log_printf("\tDeallocations: %d (%zu)\n", ogle_object_total_deallocations(), ogle_object_memory_freed());
-	ogle_log_printf("\tNet: %zu\n", ogle_object_memory_allocated() - ogle_object_memory_freed());
-	ogle_log_printf("\nGoodbye!\n\n");
-}
 
 static void s_main_input(s_data_main_t* data_main)
 {
@@ -346,14 +264,14 @@ int32_t main(int32_t argc, const char** argv)
 
 	data_main.m_render = &data_render;
 
-	if ((result = s_main_initialize(&data_main)) == 0)
+	if ((result = s_data_main_initialize(&data_main)) == 0)
 	{
 		data_main.m_running = true;
 
 		s_main_loop(&data_main);
 	}
 
-	s_main_cleanup(&data_main);
+	s_data_main_uninitialize(&data_main);
 
 	return result;
 }
