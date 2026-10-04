@@ -40,6 +40,7 @@
     <None Include="assets\shaders\vertex_depth.glsl">
       <Filter>Resource Files\Shader Files</Filter>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\s_main.c">

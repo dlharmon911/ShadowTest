@@ -155,6 +155,7 @@
     <None Include="assets\shaders\vertex_light.glsl" />
     <None Include="assets\shaders\vertex_normal.glsl" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="manifest\s_manifest.c" />
@@ -172,7 +173,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">d:\gtmp\repos\lcompiler\x64\Release\lcompiler.exe -d manifest -o shadow</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">manifest\s_manifest.h;manifest\s_manifest.c</Outputs>
-      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatOutputAsContent>
+      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</TreatOutputAsContent>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling manifest</Message>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
