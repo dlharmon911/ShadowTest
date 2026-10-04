@@ -1,8 +1,6 @@
 #ifndef _HEADER_GUARD_SHADOW_TEST_COMMON_H_
 #define _HEADER_GUARD_SHADOW_TEST_COMMON_H_
 
-#define ALLEGRO_UNSTABLE
-
 #include <allegro5/allegro5.h>
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_acodec.h>

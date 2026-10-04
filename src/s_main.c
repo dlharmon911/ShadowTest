@@ -193,10 +193,10 @@ static void s_main_update(s_data_main_t* data_main)
 
 	ogle_input_reset(data_main->m_input);
 
-	float x = cos(data_main->m_render->m_light_angle) * 10.0f;
-	float z = sin(data_main->m_render->m_light_angle) * 10.0f;
+	float x = cos(data_main->m_render->m_light_angle) * 20.0f;
+	float z = sin(data_main->m_render->m_light_angle) * 20.0f;
 
-	data_main->m_render->m_light.m_position = (o_vector3_t){ x, 15.0f, z };
+	data_main->m_render->m_light.m_position = (o_vector3_t){ x, 20.0f, z };
 	data_main->m_render->m_light_angle += 0.01f;
 	if (data_main->m_render->m_light_angle > OGLE_MATH_TAU)
 	{

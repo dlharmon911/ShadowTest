@@ -1,3 +1,5 @@
+#define ALLEGRO_UNSTABLE
+
 #include "s_common.h"
 
 static const o_light_t g_light =

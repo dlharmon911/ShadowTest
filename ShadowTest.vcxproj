@@ -172,9 +172,11 @@
     <CustomBuild Include="manifest.xml">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">d:\gtmp\repos\lcompiler\x64\Release\lcompiler.exe -d manifest -o shadow</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">manifest\s_manifest.h;manifest\s_manifest.c</Outputs>
-      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</TreatOutputAsContent>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)manifest\s_manifest.h;$(SolutionDir)manifest\s_manifest.c</Outputs>
+      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatOutputAsContent>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling manifest</Message>
+      <OutputItemType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </OutputItemType>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

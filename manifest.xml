@@ -2,7 +2,7 @@
 <manifest version="1.0">
 	<addon type="image|font|primitives" />
 	<input type="keyboard|mouse" />
-	<application title="Mahjong">
+	<application title="Shadow Test">
 		<display width="1200" height="800" flags="resizable|windowed|opengl|programmable_pipeline">
 			<option type="depth_size" value="16" importance="suggest"/>	
 		</display>
